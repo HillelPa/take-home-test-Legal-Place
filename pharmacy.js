@@ -12,8 +12,7 @@ export class Pharmacy {
     this.drugs = drugs;
   }
   updateBenefitValue() {
-    for (var i = 0; i < this.drugs.length; i++) {
-      const drug = this.drugs[i];
+    for (const drug of this.drugs) {
       const config = DRUGS_CONFIG[drug.name] ?? DEFAULT_DRUG_CONFIG;
 
       drug.benefit += config.benefitChange;

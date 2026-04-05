@@ -15,23 +15,20 @@ export const DEFAULT_DRUG_CONFIG = {
 
 export const DRUGS_CONFIG = {
   [DRUG_NAMES.MAGIC_PILL]: {
+    ...DEFAULT_DRUG_CONFIG,
     benefitChange: 0,
     expiryBenefitChange: 0,
     neverExpires: true,
-    dropToZeroOnExpiry: false,
-    thresholds: [],
   },
   [DRUG_NAMES.HERBAL_TEA]: {
+    ...DEFAULT_DRUG_CONFIG,
     benefitChange: 1,
     expiryBenefitChange: 1,
-    neverExpires: false,
-    dropToZeroOnExpiry: false,
-    thresholds: [],
   },
   [DRUG_NAMES.FERVEX]: {
+    ...DEFAULT_DRUG_CONFIG,
     benefitChange: 1,
     expiryBenefitChange: 0,
-    neverExpires: false,
     dropToZeroOnExpiry: true,
     thresholds: [
       { daysLeft: 10, bonusChange: 1 },
@@ -39,10 +36,8 @@ export const DRUGS_CONFIG = {
     ],
   },
   [DRUG_NAMES.DAFALGAN]: {
+    ...DEFAULT_DRUG_CONFIG,
     benefitChange: -2,
     expiryBenefitChange: -2,
-    neverExpires: false,
-    dropToZeroOnExpiry: false,
-    thresholds: [],
   },
 };
