@@ -9,6 +9,7 @@ export class Drug {
 export class Pharmacy {
   constructor(drugs = []) {
     this.drugs = drugs;
+    console.log(this.drugs);
   }
   updateBenefitValue() {
     for (var i = 0; i < this.drugs.length; i++) {
